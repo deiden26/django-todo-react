@@ -5,8 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
+djangorestframework = '*'
+django-filter = '*'
+django-cors-headers = "*"
 
 [dev-packages]
+prospector = "*"
 
 [requires]
 python_version = "3.6"

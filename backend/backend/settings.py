@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',            # add this
-    'rest_framework',         # add this 
+    'rest_framework',         # add this
     'todo',
+    'tag',
   ]
 
 
@@ -126,5 +127,12 @@ STATIC_URL = '/static/'
 
 # we whitelist localhost:3000 because that's where frontend will be served
 CORS_ORIGIN_WHITELIST = (
-     'localhost:3000/'
+    'http://localhost:3000',
+    'https://localhost:3000',
  )
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+}
